@@ -1,0 +1,13 @@
+<h1><%= @user.name %>'s Profile</h1>
+
+<h2>Posts</h2>
+<%unless @posts.nil? %>
+	<% @posts.each do |post| %>
+		<%= post.content %>
+		<% if logged_in? %>
+			<% user = User.find_by(user_id: post.user_id) %>
+			by: <%= user.name %>
+		<% end %>
+		<br>
+	<% end %>
+<% end %>

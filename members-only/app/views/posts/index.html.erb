@@ -1,0 +1,14 @@
+<h1>All Posts</h1>
+<%= link_to "New Post", new_post_path %>
+<br><br>
+
+<% unless @posts.empty? %>
+	<% @posts.each do |post| %>
+		<%= post.content %><br>
+		<% if logged_in? %>
+			<% user = User.find(post.user_id) %>
+			by: <%= user.name %>
+		<% end %>
+		<br><br>
+	<% end %>
+<% end %>

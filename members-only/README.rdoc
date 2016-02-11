@@ -1,4 +1,4 @@
 # Members Only! Rails Application
 
-A clubhouse for members to make posts about others.
-Authorship anonymous to non-members but known to members.
+# A clubhouse for members to make posts about others.
+# Authorship anonymous to non-members but known to members.
